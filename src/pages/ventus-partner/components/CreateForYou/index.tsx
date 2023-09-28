@@ -2,7 +2,7 @@ import { cn } from "@/utils/cn";
 import { Container } from "../Container";
 import Image from "next/image";
 import ainamteGif from "../assets/banner-animate.gif"
-import ainamteGif2 from "../assets/banner-animate-2.gif"
+import ainamteGif2 from "../assets/banner-animate.gif"
 import { useState } from "react";
 
 export function CreateForYou() {
