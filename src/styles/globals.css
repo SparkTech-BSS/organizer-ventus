@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+  font-family: "Inter", sans-serif;
+}
+
+.visible {
+  opacity: 1;
+  max-height: 1000px;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.invisible {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.SliderRoot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  touch-action: none;
+  width: 471px;
+  height: 32px;
+}
+
+.SliderTrack {
+  background-color: rgba(120, 120, 128, 0.36);
+  position: relative;
+  flex-grow: 1;
+  border-radius: 9999px;
+  height: 3px;
+}
+
+.SliderRange {
+  position: absolute;
+  background-color: #9F64FF;
+  border-radius: 9999px;
+  height: 100%;
+}
+
+.SliderThumb {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #9F64FF;
+  box-shadow: 0 2px 10px #9F64FF;
+  border-radius: 10px;
+}
+.SliderThumb:hover {
+  background-color: #9F64FF;
+}
+.SliderThumb:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #9F64FF;
+}
