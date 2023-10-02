@@ -3,7 +3,8 @@ import { Container } from "../Container";
 import Image from "next/image";
 import ainamteGif from "../assets/banner-animate.gif"
 import ainamteGif2 from "../assets/banner-animate.gif"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import SkeletonCard from "@/components/SkeletonCard";
 
 export function CreateForYou() {
   const [selectedImage, setSelectedImage] = useState(ainamteGif);
@@ -11,6 +12,19 @@ export function CreateForYou() {
   const handleButtonClick = (imageSrc: any) => {
     setSelectedImage(imageSrc);
   };
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const delay = 2000;
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, delay);
+
+    return () => clearTimeout(timer);
+
+  }, []);
 
   return (
     <Container className={cn("lg:pb-20 lg:pt-[120px] pt-[78px] pb-[40px] gap-[120px] items-center justify-center self-stretch flex flex-col")}>
@@ -33,7 +47,9 @@ export function CreateForYou() {
           </div>
         </div>
 
-        {selectedImage && (
+        {isLoading ? (
+          <SkeletonCard width={1200} height={675} />
+        ) : (
           <Image src={selectedImage} alt="" quality={100} className="w-full rounded-[20px]" />
         )}
       </div>

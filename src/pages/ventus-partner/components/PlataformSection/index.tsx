@@ -3,18 +3,36 @@ import { Container } from "../Container";
 import Image from "next/image";
 import plataformImg from "../assets/plataform-img.png"
 import { CheckFat } from "@phosphor-icons/react";
-
+import { useEffect, useState } from "react";
+import SkeletonCard from "@/components/SkeletonCard";
 
 export function PlataformSection() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const delay = 2000;
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, delay);
+
+    return () => clearTimeout(timer);
+
+  }, []);
+
   return (
     <>
       <Container className={cn("sm:py-20 py-[62px] lg:pt-[120px] gap-[120px] items-start self-stretch lg:flex grid grid-cols-1 lg:pb-20")}>
-        <Image
-          src={plataformImg}
-          alt=""
-          quality={100}
-          className="max-w-[497px] bg-cover flex-1 hidden md:block"
-        />
+        {isLoading ? (
+          <SkeletonCard width={497} height={456} />
+        ) : (
+          <Image
+            src={plataformImg}
+            alt=""
+            quality={100}
+            className="max-w-[497px] bg-cover flex-1 hidden md:block"
+          />
+        )}
 
         <div className="flex flex-col items-start gap-[60px]">
           <div className="flex flex-col lg:items-start gap-4 self-stretch">
@@ -22,12 +40,14 @@ export function PlataformSection() {
             <p className="text-violet-100 text-center text-opacity-60 text-base font-normal font-sans leading-normal">Tenha sua própria aplicação personalizada com todas as funcionalidades da Ventus.</p>
           </div>
 
+          
           <Image
             src={plataformImg}
             alt=""
             quality={100}
             className="lg:max-w-[497px] bg-cover flex-1 block md:hidden"
           />
+         
 
           <div className="flex w-full p-8 flex-col items-start gap-4 from-zinc-500  bg-gradient-partner rounded-[20px]  ">
             <div className="flex items-start gap-3">

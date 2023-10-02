@@ -3,9 +3,23 @@ import { Container } from "../Container";
 import Image from "next/image";
 import peopleImg from "../assets/peaple.png"
 import { ArrowRight, ChartBar, Check, HandHeart, PiggyBank, Scroll, User } from "@phosphor-icons/react";
+import { useEffect, useState } from "react";
+import SkeletonCard from "@/components/SkeletonCard";
 
 export function ConstructorFuture() {
-  <h2 className="xl:px-56 text-center bg-clip-text text-transparent bg-gradient-to-b from-[#ffffff] to-[#ffffffa1] lg:text-7xl text-5xl font-semibold font-sans">Crie eventos para todas ocasiões</h2>
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const delay = 2000;
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, delay);
+
+    return () => clearTimeout(timer);
+
+  }, []);
+
   return (
     <Container className={cn("lg:py-[120px] pt-[78px] lg:gap-[80px] gap-10 items-center self-stretch flex flex-col")}>
       <h2 className="lg:px-48 text-center bg-clip-text text-transparent bg-gradient-to-b from-[#ffffff] to-[#ffffffa1] lg:text-[40px] text-2xl font-semibold font-sans">Construa seu futuro enquanto aproveita mais tempo com sua família!</h2>
@@ -42,12 +56,15 @@ export function ConstructorFuture() {
 
 
           </div>
-
-          <Image src={peopleImg}
-            alt=""
-            quality={100}
-            className="lg:max-w-[437px] bg-cover flex-1"
-          />
+          {isLoading ? (
+            <SkeletonCard width={437} height={777}/>
+          ) : (
+            <Image src={peopleImg}
+              alt=""
+              quality={100}
+              className="lg:max-w-[437px] bg-cover flex-1"
+            />
+          )}
         </div>
 
         <div className="flex py-[52px] px-8 flex-col items-center gap-10 rounded-[20px] border border-solid  bg-gradient-partern from-purple-500 to-purple-500  border-[#FFFFFF26] border-opacity-20 backdrop-blur-[80px]  ">
