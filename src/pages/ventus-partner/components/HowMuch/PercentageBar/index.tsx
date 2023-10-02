@@ -21,7 +21,7 @@ export function PercentageBar() {
       <div className="flex items-center">
         <form>
           <Slider.Root
-            className="SliderRoot lg:w-full max-w-[343px]"
+            className="SliderRoot lg:min-w-[471px] max-w-[343px]"
             value={[sliderValue]}
             onValueChange={(newValue) => handleSliderChange(newValue[0])}
             max={5_000_000}

@@ -13,6 +13,7 @@ import { ClientPartner } from './components/ClientPartner'
 import { CreateForYou } from './components/CreateForYou'
 import { ForPartner } from './components/ForPartner'
 import { ConstructorFuture } from './components/ConstructorFuture'
+import { CheckListMobile } from './components/CheckListMobile'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -63,7 +64,13 @@ export default function VentusPartnerPage() {
           </section>
 
           <section id="quest" className="container:px-4 bg-ventus-primary relative z-10">
-            <CheckList />
+            <div className="hidden md:block">
+              <CheckList />
+            </div>
+
+            <div className="block md:hidden">
+              <CheckListMobile />
+            </div>
           </section>
 
           <section id="quest" className="container:px-4 bg-ventus-primary relative z-10">

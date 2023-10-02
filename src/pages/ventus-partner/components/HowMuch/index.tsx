@@ -17,7 +17,7 @@ export function HowMuch() {
           <div className="flex flex-col lg:items-start items-center gap-10 lg:gap-20">
             <div className="grid grid-cols-1 w-full lg:flex flex-col gap-8 items-start self-stretch">
               <div className="flex flex-col items-start gap-4 self-stretch">
-                <div className="flex flex-col lg:items-start items-center self-stretch">
+                <div className="flex flex-col lg:items-start items-center self-stretch lg:gap-2">
                   <h3 className="text-purple-500 lg:text-[40px] text-2xl font-semibold font-sans">Sendo Ventus Partner.</h3>
                   <p className="text-white lg:text-[40px] text-2xl font-semibold font-sans">Você pode ganhar </p>
                 </div>
@@ -31,9 +31,9 @@ export function HowMuch() {
 
             </div>
 
-            <button className="px-4 py-[12.50px] bg-zinc-500  bg-opacity-20 rounded-[66px] border border-white border-opacity-20 justify-center items-center gap-2.5 inline-flex" onClick={onOpen}>
+            {/* <button className="px-4 py-[12.50px] bg-zinc-500  bg-opacity-20 rounded-[66px] border border-white border-opacity-20 justify-center items-center gap-2.5 inline-flex" onClick={onOpen}>
               <p className="text-white hover:text-violet-100 transition-all shadow text-base font-bold font-sans">Simular lucros</p>
-            </button>
+            </button> */}
           </div>
 
 

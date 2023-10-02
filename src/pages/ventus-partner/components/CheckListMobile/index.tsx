@@ -7,7 +7,7 @@ import { List } from "./List";
 import { useState } from "react";
 
 
-export function CheckList() {
+export function CheckListMobile() {
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -17,45 +17,45 @@ export function CheckList() {
 
   return (
     <>
-      <Container className={cn("sm:py-20 lg:pt-[120px] gap-[80px] items-center flex-col justify-center self-stretch flex lg:pb-20")}>
-        <h2 className="text-center text-white text-5xl font-semibold font-sans">Por que ser um Ventus Partner é a melhor decisão?</h2>
-        <div className="w-full flex lg:px-[50px] flex-col items-end">
-          <div className="flex justify-end items-start gap-4">
-            <div className="flex p-8 justify-center items-center gap-[10px] ">
-              <p className="text-center text-white text-xl font-normal font-sans">Ventus partner</p>
+      <Container className={cn("sm:py-20 lg:pt-[120px] py-[62px] gap-4 lg:gap-[80px] items-center flex-col justify-center self-stretch lg:flex lg:pb-20")}>
+        <h2 className="lg:text-center text-white text-2xl lg:text-5xl font-semibold font-sans">Por que ser um Ventus Partner é a melhor decisão?</h2>
+        <div className="lg:w-full flex lg:px-[50px] flex-col items-end">
+          <div className="grid lg:grid-cols-3 grid-cols-2 lg:flex justify-end items-start gap-4">
+            <div className="flex lg:p-8 p-4 justify-center items-center gap-[10px] ">
+              <p className="text-center text-white text-sm lg:text-xl font-normal font-sans">Ventus Partner</p>
             </div>
 
-            <div className="flex p-8 justify-center items-center gap-[10px] ">
-              <p className="text-center text-white text-xl font-normal font-sans">Concorrentes</p>
+            <div className="flex lg:p-8 p-4 justify-center items-center gap-[10px] ">
+              <p className="text-center text-white text-sm lg:text-xl font-normal font-sans">Concorrentes</p>
             </div>
 
-            <div className="flex p-8 justify-center items-center gap-[10px] ">
-              <p className="text-center text-white text-xl font-normal font-sans">Gráfica</p>
+            <div className="lg:flex hidden md:block  lg:p-8 p-4 justify-center items-center gap-[10px] ">
+              <p className="text-center text-white text-sm lg:text-xl font-normal font-sans">Gráfica</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
+          <div className="grid lg:grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
             <List
               title="Plataforma própria e personalizada"
               description="Personalize sua plataforma com cores, tipografia e sua marca. Você está no controle total, sem surpresas."
             />
           </div>
 
-          <div className="grid grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
+          <div className="grid lg:grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
             <List
               title="Promotores na sua plataforma"
               description="Deixe os promotores venderem seus eventos com a tecnologia Ventus na sua plataforma. E aumente suas vendas com eventos de diversos promotores."
             />
           </div>
 
-          <div className="grid grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
+          <div className="grid lg:grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
             <List
               title="Suporte técnico e atualizações"
               description="Conte com o suporte técnico contínuo da Ventus e atualizações regulares para manter sua aplicação em pleno funcionamento."
             />
           </div>
 
-          <div className="grid grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-t border-neutral-700">
+          <div className="grid lg:grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-t border-neutral-700">
             <List
               title="Acesso a Recursos de Marketing"
               description="Tenha acesso a materiais de marketing, incluindo designs, modelos e estratégias para impulsionar suas vendas."
@@ -64,42 +64,42 @@ export function CheckList() {
 
           {isVisible && (
             <>
-              <div className="grid grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
+              <div className="grid lg:grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
                 <List
                   title="Criar lista de participantes"
                   description="Para casamentos, passeios turisticos e outros eventos privados, a Ventus oferece a criaçao de lista de participantes, e envio de convites."
                 />
               </div>
 
-              <div className="grid grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
+              <div className="grid lg:grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
                 <List
                   title="Liberdade financeira"
                   description="A Ventus permite aos parceiros terem liberdade financeira. Após conseguir um número razoavel de promotores para si, voce terá a liberdade de poder trabalhar menos e deixar todo o lucro por conta deles, e seus eventos."
                 />
               </div>
 
-              <div className="grid grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
+              <div className="grid lg:grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
                 <List
                   title="Taxa fixa"
                   description="Aqui voce não paga nenhuma porcentagem para a Ventus. A unica coisa que voce paga é um valor fixo de 175 kwanzas por cada bilhete emitido. Que no final sai do bolso do cliente final."
                 />
               </div>
 
-              <div className="grid grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
+              <div className="grid lg:grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
                 <List
                   title="Treinamento"
                   description="No primeiro mes voce recebe um treinamento grátis para aprender como gerenciar sua plataforma. E ve dicas na plataforma de atualizações e tudo mais."
                 />
               </div>
 
-              <div className="grid grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
+              <div className="grid lg:grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-b border-t border-neutral-700">
                 <List
                   title="Hospedagem Gratuita"
                   description="Sendo parceiro voce não precisa se preocupar com a hospedagem da sua plataforma, nós cuidamos de tudo."
                 />
               </div>
 
-              <div className="grid grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-t border-neutral-700">
+              <div className="grid lg:grid-cols-[2fr_2fr] justify-end items-center gap-4 self-stretch  border-t border-neutral-700">
                 <List
                   title="Subdominio Gratuito"
                   description="Seu subdominio conosco é gratuito, porém se quiser colocar um seu, voce poderá colocar que nós instalamos."

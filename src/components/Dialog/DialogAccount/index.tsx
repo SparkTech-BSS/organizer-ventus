@@ -67,13 +67,11 @@ export function DialogAccount() {
                             <div className="w-full flex p-4 items-center gap-[10px] border-b border-t border-white border-opacity-20">
                                 <p className="text-white text-sm font-normal font-sans font-sans ">Funcionalidades</p>
                             </div>
-                            <div className="w-full flex p-4 items-center gap-[10px] border-b border-white border-opacity-20">
-                                <p className="text-white text-sm font-normal font-sans font-sans ">Preços</p>
-                            </div>
+                            
 
-                            <div className="w-full flex p-4 items-center gap-[10px] border-b border-white border-opacity-20">
+                            <Link href="/ventus-partner" className="w-full flex p-4 items-center gap-[10px] border-b border-white border-opacity-20">
                                 <p className="text-white text-sm font-normal font-sans font-sans ">Ventus Partner</p>
-                            </div>
+                            </Link>
 
                         </div>
 
