@@ -26,6 +26,7 @@ export default function VentusPartnerPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#000" />
+        <meta property="og:image" content="/img-banner.png" />
       </Head>
 
       <style>{`
