@@ -8,18 +8,26 @@ import { CheckFat } from "@phosphor-icons/react";
 export function PlataformSection() {
   return (
     <>
-      <Container className={cn("sm:py-20 lg:pt-[120px] gap-[120px] items-start self-stretch flex lg:pb-20")}>
-        <Image src={plataformImg}
+      <Container className={cn("sm:py-20 py-[62px] lg:pt-[120px] gap-[120px] items-start self-stretch lg:flex grid grid-cols-1 lg:pb-20")}>
+        <Image
+          src={plataformImg}
           alt=""
           quality={100}
-          className="max-w-[497px] bg-cover flex-1"
+          className="max-w-[497px] bg-cover flex-1 hidden md:block"
         />
 
         <div className="flex flex-col items-start gap-[60px]">
-          <div className="flex flex-col items-start gap-4 self-stretch">
-            <h2 className="text-white text-[40px] font-semibold font-sans">Sua plataforma de bilhetes personalizada</h2>
-            <p className="text-violet-100 text-opacity-60 text-base font-normal font-sans leading-normal">Tenha sua própria aplicação personalizada com todas as funcionalidades da Ventus.</p>
+          <div className="flex flex-col lg:items-start gap-4 self-stretch">
+            <h2 className="text-white px-7 text-center lg:text-[40px] text-2xl font-semibold font-sans">Sua plataforma de bilhetes personalizada</h2>
+            <p className="text-violet-100 text-center text-opacity-60 text-base font-normal font-sans leading-normal">Tenha sua própria aplicação personalizada com todas as funcionalidades da Ventus.</p>
           </div>
+
+          <Image
+            src={plataformImg}
+            alt=""
+            quality={100}
+            className="lg:max-w-[497px] bg-cover flex-1 block md:hidden"
+          />
 
           <div className="flex w-full p-8 flex-col items-start gap-4 from-zinc-500  bg-gradient-partner rounded-[20px]  ">
             <div className="flex items-start gap-3">
@@ -43,7 +51,7 @@ export function PlataformSection() {
             </div>
           </div>
 
-          
+
         </div>
       </Container>
     </>

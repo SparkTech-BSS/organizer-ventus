@@ -49,7 +49,7 @@ export function Header({ type }: HeaderProps) {
               <Link href="/">
                 <Image
                   alt=""
-                  className="w-[90px]  cursor-pointer"
+                  className="w-[90px] lg:pb-[10px]  cursor-pointer"
                   quality={100}
                   src={logoImg}
                 />
