@@ -13,7 +13,7 @@ import { Container } from "../Container";
 import Link from "next/link";
 import { Button } from "../Button";
 import useAccountDialog from "@/stores/useAccountDialog";
-import { DialogAccount } from "../Dialog/DialogAccount";
+import { MenuResponsive } from "../Dialog/MenuResponsive";
 
 interface HeaderProps {
   type?: string;
@@ -87,7 +87,7 @@ export function Header({ type }: HeaderProps) {
         </Container>
       </div>
 
-      <DialogAccount />
+      <MenuResponsive />
     </>
   );
 }

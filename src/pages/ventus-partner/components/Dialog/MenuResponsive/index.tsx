@@ -9,7 +9,7 @@ import Image from "next/image"
 import Link from "next/link";
 
 
-export function DialogAccount() {
+export function MenuResponsive() {
     const { onClose, isOpen } = useAccountDialog();
 
     return (
@@ -76,7 +76,7 @@ export function DialogAccount() {
                         </div>
 
                         <div className="flex px-4">
-                            <button className="w-full px-4 py-[12.50px] bg-red-600 rounded-[66px] justify-center items-center gap-2.5 inline-flex">
+                            <button className="w-full px-4 py-[12.50px] bg-violet-600 rounded-[66px] justify-center items-center gap-2.5 inline-flex">
                                 <p className="text-white text-base font-bold font-sans font-sans ">Comece agora!</p>
                             </button>
                         </div>

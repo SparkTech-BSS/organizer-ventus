@@ -4,11 +4,11 @@ import Image from "next/image";
 import personImg from "../assets/how-much-person.png"
 import { PercentageBar } from "./PercentageBar";
 
-import { DialogAccount } from "../Dialog/DialogAccount";
-import useAccountDialog from "@/stores/useAccountDialog";
+// import { DialogAccount } from "../Dialog/DialogAccount";
+// import useAccountDialog from "@/stores/useAccountDialog";
 
 export function HowMuch() {
-  const { onOpen } = useAccountDialog();
+  // const { onOpen } = useAccountDialog();
 
   return (
     <>
@@ -45,7 +45,7 @@ export function HowMuch() {
 
       </Container>
 
-      <DialogAccount />
+      {/* <DialogAccount /> */}
     </>
   )
 }
