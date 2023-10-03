@@ -50,9 +50,21 @@ export function CreateForYou() {
         {isLoading ? (
           <SkeletonCard width={1200} height={675} />
         ) : (
-          <Image src={selectedImage} alt="" quality={100} className="w-full rounded-[20px]" />
+          <iframe
+          src="https://www.youtube.com/embed/Th5hJP-2EQE?autoplay=1&loop=1&playlist=Th5hJP-2EQE"
+          className="w-full rounded-[20px]"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{
+            height: '694px',
+            width: '1200px',
+            pointerEvents: 'none'  // Disables the cursor
+          }}
+        />
         )}
       </div>
+
+
     </Container>
   )
 }
